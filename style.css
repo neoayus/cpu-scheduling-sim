@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9fb;
+  color: #333;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+button, input, select {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  margin: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+input[type="number"], input[type="text"] {
+  width: 100%;
+  max-width: 150px;
+}
+
+/* Layout container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+td, th {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Gantt chart output styling */
+#ganttChart {
+  display: flex;
+  /* align-items: center; */
+  gap: 4px;
+  margin-top: 1rem;
+}
+
+.gantt-block {
+  background: #007bff;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Card styles */
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Center headings and buttons */
+.card h2, .card h3, .container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+button, select {
+  margin: 0.3rem;
+}
+
+.container h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+body.dark-mode {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode .card {
+  background: #2c2c2c;
+  border-color: #444;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode button {
+  background: #3a3a3a;
+  color: #f1f1f1;
+  border: 1px solid #666;
+}
+
+.dark-mode table,
+.dark-mode th,
+.dark-mode td {
+  border-color: #444;
+}
+
+.dark-mode .gantt-block {
+  background: #0091ea;
+}
+
+/* Form Field Styling */
+#controls label {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  color: #444;
+}
+
+#controls input[type="text"],
+#controls input[type="number"],
+#controls select {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 0.3rem;
+}
+
+/* Button container spacing */
+#input-fields > div {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Table Enhancements */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: #f0f4f8;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tbody tr:hover {
+  background-color: #eef2f7;
+}
+
+/* Metrics boldness */
+#metrics-section table td,
+#metrics-section table th {
+  font-weight: 500;
+}
+
+#ganttChart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  min-height: 60px;
+}
+
+.gantt-bar {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  position: relative;
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Keyframe for appearance */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* dark mode */
+/* DARK MODE STYLES */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode label,
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  color: #f0f0f0;
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode #ganttChart .gantt-bar {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark-mode table {
+  border-collapse: collapse;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border: 1px solid #333;
+}
+
+/* Optional: make input/controls feel more elevated */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
